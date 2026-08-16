@@ -1,0 +1,12 @@
+node_modules/
+src-tauri/target/
+.DS_Store
+*.log
+.env
+.env.local
+release/
+dist-bundle/
+# Generated / local only — stub `dist/` is committed for Tauri config.
+*.dmg
+*.exe
+*.app

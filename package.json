@@ -1,0 +1,17 @@
+{
+  "name": "nodo-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nodo desktop — same web app in its own window (Tauri).",
+  "type": "module",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "build:debug": "tauri build --debug",
+    "icons": "tauri icon ./app-icon-rounded.png"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.4.0"
+  }
+}
