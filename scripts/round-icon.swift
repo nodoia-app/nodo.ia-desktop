@@ -11,17 +11,22 @@ guard let src = NSImage(contentsOf: srcURL) else {
 
 let dim: CGFloat = 1024
 let size = NSSize(width: dim, height: dim)
+// Shrink the whole icon plate (Dock/Finder), not the mark inside it.
+let plateScale: CGFloat = 0.82
+let plateDim = dim * plateScale
+let origin = (dim - plateDim) / 2
+let plateRect = NSRect(x: origin, y: origin, width: plateDim, height: plateDim)
+let radius = plateDim * 0.2237
+
 let image = NSImage(size: size)
 image.lockFocus()
 NSGraphicsContext.current?.imageInterpolation = .high
 NSColor.clear.setFill()
 NSRect(origin: .zero, size: size).fill()
-// Same visual as public/images/nodo-app-icon.png (squircle-ish rounded rect).
-let radius = dim * 0.2237
-let path = NSBezierPath(roundedRect: NSRect(origin: .zero, size: size), xRadius: radius, yRadius: radius)
+let path = NSBezierPath(roundedRect: plateRect, xRadius: radius, yRadius: radius)
 path.addClip()
 src.draw(
-  in: NSRect(origin: .zero, size: size),
+  in: plateRect,
   from: NSRect(origin: .zero, size: src.size),
   operation: .copy,
   fraction: 1
