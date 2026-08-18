@@ -8,8 +8,10 @@ Instalador liviano — usa el WebView del sistema.
 | Modo | Qué carga |
 |------|-----------|
 | `npm run dev` | **`http://localhost:3000/agent`** — tu Next local + `.env.local` (staging backend) |
-| `npm run build` (instalador) | **`https://www.nodoia.app/agent`** — production |
+| `npm run build` (instalador) | **`https://login.nodoia.app`** — production |
 | Override | `NODO_APP_URL=https://tu-staging…/agent npm run dev` |
+
+La ventana carga el producto (`login.nodoia.app`). Links a `docs.nodoia.app` (términos, etc.) se abren en el navegador del sistema.
 
 No uses production mientras desarrollas. Arranca `nodo.ia-web` en `:3000` y luego el desktop.
 
@@ -39,6 +41,18 @@ NODO_APP_URL=https://TU-STAGING.vercel.app/agent npm run dev
 ```
 
 ## Build instalador (apunta a production)
+
+Tauri **no cruza de Mac a Windows**. Este Mac saca el `.dmg`. El `.exe` de los locales sale en GitHub Actions (runner `windows-latest`).
+
+### Windows `.exe` (el que importa)
+
+1. Push a `main` (incluye impresora LAN).
+2. GitHub → **Actions** → **Build installers** → **Run workflow**.
+3. Baja el artifact `Nodo-windows-x64` → `Nodo_1.0.0_x64-setup.exe`.
+
+El instalador es NSIS, current-user (no pide admin) y trae WebView2 si el PC no lo tiene.
+
+### Mac `.dmg` (local)
 
 ```bash
 npm run build

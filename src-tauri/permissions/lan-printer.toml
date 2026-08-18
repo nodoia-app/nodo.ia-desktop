@@ -1,0 +1,14 @@
+[[permission]]
+identifier = "allow-scan-lan-printers"
+description = "Scan this machine's LAN for ESC/POS printers on TCP 9100"
+commands.allow = ["scan_lan_printers"]
+
+[[permission]]
+identifier = "allow-confirm-lan-printer"
+description = "Confirm a saved lan:IP:PORT printer is reachable before pairing"
+commands.allow = ["confirm_lan_printer"]
+
+[[permission]]
+identifier = "allow-print-lan"
+description = "Send an ESC/POS ticket to a LAN printer on TCP 9100"
+commands.allow = ["print_lan"]
