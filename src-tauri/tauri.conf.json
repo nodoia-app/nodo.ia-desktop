@@ -29,7 +29,9 @@
       "icons/icon.ico"
     ],
     "macOS": {
-      "minimumSystemVersion": "10.15"
+      "minimumSystemVersion": "10.15",
+      "signingIdentity": "Developer ID Application: EcoQuasar s.r.o. (723RB455D9)",
+      "entitlements": "./Entitlements.plist"
     },
     "windows": {
       "nsis": {
