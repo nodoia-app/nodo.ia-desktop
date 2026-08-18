@@ -9,7 +9,7 @@
     "dev": "tauri dev",
     "build": "tauri build",
     "build:debug": "tauri build --debug",
-    "icons": "tauri icon ./app-icon-rounded.png"
+    "icons": "tauri icon ./app-icon.png"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.4.0"
