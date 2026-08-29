@@ -5,8 +5,14 @@
   "windows": ["main"],
   "remote": {
     "urls": [
+      "https://login.nodoia.app",
+      "https://login.nodoia.app/",
       "https://login.nodoia.app/*",
+      "https://www.nodoia.app",
+      "https://www.nodoia.app/",
       "https://www.nodoia.app/*",
+      "https://nodoia.app",
+      "https://nodoia.app/",
       "https://nodoia.app/*",
       "http://localhost:3000/*",
       "http://localhost:3002/*",

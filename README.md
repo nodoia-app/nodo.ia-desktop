@@ -8,7 +8,7 @@ Instalador liviano — usa el WebView del sistema.
 | Modo | Qué carga |
 |------|-----------|
 | `npm run dev` | **`http://localhost:3000/agent`** — tu Next local + `.env.local` (staging backend) |
-| `npm run build` (instalador) | **`https://login.nodoia.app`** — production |
+| `npm run build` (instalador) | **`https://login.nodoia.app/agent`** — production |
 | Override | `NODO_APP_URL=https://tu-staging…/agent npm run dev` |
 
 La ventana carga el producto (`login.nodoia.app`). Links a `docs.nodoia.app` (términos, etc.) se abren en el navegador del sistema.

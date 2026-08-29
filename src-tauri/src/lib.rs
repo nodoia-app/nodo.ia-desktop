@@ -42,7 +42,7 @@ fn app_url() -> String {
     if cfg!(debug_assertions) {
         "http://localhost:3000/agent".into()
     } else {
-        "https://login.nodoia.app".into()
+        "https://login.nodoia.app/agent".into()
     }
 }
 
@@ -50,7 +50,7 @@ fn fallback_url() -> &'static str {
     if cfg!(debug_assertions) {
         "http://localhost:3000/agent"
     } else {
-        "https://login.nodoia.app"
+        "https://login.nodoia.app/agent"
     }
 }
 
@@ -98,7 +98,12 @@ fn is_webview_url(url: &url::Url) -> bool {
     }
 
     let host = url.host_str().unwrap_or("");
-    if host == "login.nodoia.app" || is_private_lan(host) || is_oauth_host(host) {
+    if host == "login.nodoia.app"
+        || host == "www.nodoia.app"
+        || host == "nodoia.app"
+        || is_private_lan(host)
+        || is_oauth_host(host)
+    {
         return true;
     }
     configured_app_host().is_some_and(|allowed| allowed == host)
