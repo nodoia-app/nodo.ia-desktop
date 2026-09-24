@@ -48,7 +48,7 @@ Tauri **no cruza de Mac a Windows**. Este Mac saca el `.dmg`. El `.exe` de los l
 
 1. Push a `main` (incluye impresora LAN).
 2. GitHub → **Actions** → **Build installers** → **Run workflow**.
-3. Baja el artifact `Nodo-windows-x64` → `Nodo_1.0.0_x64-setup.exe`.
+3. Baja el artifact `Nodo-windows-x64` → `Nodo_1.0.1_x64-setup.exe`.
 
 El instalador es NSIS, current-user (no pide admin) y trae WebView2 si el PC no lo tiene.
 

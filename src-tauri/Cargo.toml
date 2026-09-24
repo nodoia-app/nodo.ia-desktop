@@ -1,6 +1,6 @@
 [package]
 name = "nodo"
-version = "1.0.0"
+version = "1.0.1"
 description = "Nodo"
 authors = ["Nodo"]
 edition = "2021"
